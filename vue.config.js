@@ -7,5 +7,21 @@ module.exports = {
   },
   "transpileDependencies": [
     "vuetify"
-  ]
+  ],
+  "pwa":{
+    workboxOptions: {
+      runtimeCaching: [
+        {
+          urlPattern: /.*\.mp3/,
+          handler: 'cacheOnly',
+          options: {
+            cacheName: 'mp3-cache',
+            cacheableResponse: {
+              statuses: [0, 200]
+            }
+          }
+        }
+      ]
+    }
+  }
 }
