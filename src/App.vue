@@ -40,7 +40,7 @@
         <v-btn fab x-large >{{item.id}}</v-btn>
       </div>-->
       <div >
-        <v-btn v-for="item in playList" :key="item.id" fab x-large @click.prevent="playSound(item.url)">{{item.id}}</v-btn>
+        <v-btn v-for="item in playList" :key="item.id" fab x-large @pointerdown.prevent="playSound(item.url)">{{item.id}}</v-btn>
       </div>
     </v-content>
   </v-app>
