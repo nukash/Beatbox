@@ -39,8 +39,8 @@
       <!-- <div :v-for="item in playList">
         <v-btn fab x-large >{{item.id}}</v-btn>
       </div>-->
-      <div v-for="item in playList" :key="item.id">
-        <v-btn fab x-large @click.prevent="playSound(item.url)">{{item.id}}</v-btn>
+      <div >
+        <v-btn v-for="item in playList" :key="item.id" fab x-large @click.prevent="playSound(item.url)">{{item.id}}</v-btn>
       </div>
     </v-content>
   </v-app>
