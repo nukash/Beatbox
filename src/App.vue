@@ -6,7 +6,7 @@
       dark
     >
       <div class="d-flex align-center">
-        <v-img
+        <!-- <v-img
           alt="Vuetify Logo"
           class="shrink mr-2"
           contain
@@ -22,37 +22,50 @@
           min-width="100"
           src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
           width="100"
-        />
+        /> -->
+        Beatbox
       </div>
 
-      <v-spacer></v-spacer>
+      <!-- <v-spacer></v-spacer> -->
 
-      <v-btn
+      <!-- <v-btn
         href="https://github.com/vuetifyjs/vuetify/releases/latest"
         target="_blank"
         text
       >
         <span class="mr-2">Latest Release</span>
         <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
+      </v-btn> -->
     </v-app-bar>
 
     <v-content>
-      <HelloWorld/>
+      <!-- <HelloWorld/> -->
+      <v-btn fab x-large @click.prevent="playSound()">
+        1
+      </v-btn>
     </v-content>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+// import HelloWorld from './components/HelloWorld';
 
 export default {
   name: 'App',
 
   components: {
-    HelloWorld,
+    // HelloWorld,
   },
-
+  methods: {
+    playSound()
+    {
+      // if(1==1)
+      {
+        var audio = new Audio(require('./assets/audio/se/01/drum-japanese2.mp3'));
+        audio.play();
+      }
+    }
+  },
   data: () => ({
     //
   }),
