@@ -1,5 +1,41 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
+    "revision": "9f3365700bb199f1b66d43fa5b37a858",
+    "url": "audio/se/01/drum-japanese2.mp3"
+  },
+  {
+    "revision": "aff903e0d35b153f05be834284670918",
+    "url": "audio/se/02/trumpet1.mp3"
+  },
+  {
+    "revision": "544cedec590097c0cd6876880abd666b",
+    "url": "audio/se/03/kotsudumi1.mp3"
+  },
+  {
+    "revision": "33cc354d977a291867b969d3d3ca4512",
+    "url": "audio/se/04/tin1.mp3"
+  },
+  {
+    "revision": "e2b6a29b32d8dd2f9a5ce500e55d9d81",
+    "url": "audio/se/05/costume-drama1.mp3"
+  },
+  {
+    "revision": "7b224f8209cb4e8b3797431e8915a240",
+    "url": "audio/se/06/boyon1.mp3"
+  },
+  {
+    "revision": "ccd90db1cf981b3e2adbf4b08ac2ee25",
+    "url": "audio/se/07/Motion-Fracture03-1.mp3"
+  },
+  {
+    "revision": "b4a2d27d8352f97ffaa3f86b52c9c3c1",
+    "url": "audio/se/08/Cut04-1.mp3"
+  },
+  {
+    "revision": "c9091a60eea54b537e8778ffab66ed2e",
+    "url": "audio/se/09/tirin1.mp3"
+  },
+  {
     "revision": "9ab54e638f4aa92b2a90",
     "url": "css/chunk-vendors.0fc50112.css"
   },
@@ -36,12 +72,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "images/icons/icon-96x96.png"
   },
   {
-    "revision": "a7c4917d157c8060d42b1eaae991a2f0",
+    "revision": "b92e878360ba5478297cdf10bfbd5cb0",
     "url": "index.html"
   },
   {
-    "revision": "c2468a0b2e2d9a355d4c",
-    "url": "js/app.08f48080.js"
+    "revision": "7d78caa8fd20653128f5",
+    "url": "js/app.77381688.js"
   },
   {
     "revision": "9ab54e638f4aa92b2a90",
@@ -52,12 +88,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "manifest.json"
   },
   {
-    "revision": "5a7814980596f72a3ba5c4a80fee3a7f",
+    "revision": "5946ea5eb79e1a33c4de5d82cffce81c",
     "url": "manifest.webmanifest"
-  },
-  {
-    "revision": "9f3365700bb199f1b66d43fa5b37a858",
-    "url": "media/drum-japanese2.9f336570.mp3"
   },
   {
     "revision": "b6216d61c03e6ce0c9aea6ca7808f7ca",
