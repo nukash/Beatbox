@@ -48,6 +48,5 @@
       "type": "image/png"
     }
   ],
-  "splash_pages": null,
-  "web_accessible_resources":["./assets/se/01/drum-japanese2.mp3"]
+  "splash_pages": null
 }
