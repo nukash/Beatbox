@@ -67,10 +67,7 @@ export default {
         {
           item.audio.currentTime=0;
         }
-        else
-        {
-          item.audio.play();
-        }
+        item.audio.play();
       }
     }
   },
