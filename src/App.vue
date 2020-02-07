@@ -40,7 +40,7 @@
         <v-btn fab x-large >{{item.id}}</v-btn>
       </div>-->
       <div >
-        <v-btn v-for="item in playList" :key="item.id" fab x-large @touchstart.prevent="playSound(item.url)">{{item.id}}</v-btn>
+        <v-btn v-for="item in playList" :key="item.id" fab x-large @touchstart.prevent="playSound(item)" @mousedown="playSound(item)" >{{item.id}}</v-btn>
       </div>
     </v-content>
   </v-app>
@@ -56,13 +56,21 @@ export default {
     // HelloWorld,
   },
   methods: {
-    playSound(url) {
-      if(url)
+    playSound(item) {
+      if(item.url)
       {
-        var audio = new Audio(
-          (url)
-        );
-        audio.play();
+        if(!item.audio){
+          item.audio = new Audio(item.url);
+        }
+
+        if(!item.audio.paused)
+        {
+          item.audio.currentTime=0;
+        }
+        else
+        {
+          item.audio.play();
+        }
       }
     }
   },
@@ -106,6 +114,10 @@ export default {
       }
     ]
     //
-  })
+  }),
+  created()
+  {
+
+  }
 };
 </script>
