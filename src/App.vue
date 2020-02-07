@@ -75,17 +75,14 @@ export default {
   },
   methods: {
     playSound(item, singleton=false) {
-      console.log("singleton=" + singleton)
       if (item.url) {
         if (singleton) {
           if (!this.bgmAudio.paused) {
             this.bgmAudio.pause();
-            console.log("audio pause");
           } else {
             this.bgmAudio.src = item.url;
             this.bgmAudio.currentTime = 0;
             this.bgmAudio.play();
-            console.log("audio play");
           }
         } else {
           if (!item.audio) {
