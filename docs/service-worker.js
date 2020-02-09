@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "precache-manifest.51b962851b319c8d15a240f4ab982296.js"
+  "precache-manifest.c908fcbd3ac1dfd9f279f8baa34864af.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "beatbox"});
