@@ -45,8 +45,8 @@
           :key="item.id"
           fab
           x-large
-          @touchstart.prevent="playSound(item,true)"
-          @mousedown="playSound(item, true)"
+          @touchstart.prevent="playSound(item,true,ture)"
+          @mousedown="playSound(item, true,true)"
         >{{item.id}}</v-btn>
       </div>
       <div>
@@ -74,15 +74,16 @@ export default {
     // HelloWorld,
   },
   methods: {
-    playSound(item, singleton = false) {
+    playSound(item, singleton = false, isSE = false) {
       if (item.url) {
         if (singleton) {
-          if (!this.bgmAudio.paused) {
-            this.bgmAudio.pause();
+          var aud = isSE ? this.seAudio :  this.bgmAudio;
+          if ((!aud.paused && !isSE)) {
+            aud.pause();
           } else {
-            this.bgmAudio.src = item.url;
-            this.bgmAudio.currentTime = 0;
-            this.bgmAudio.play();
+            aud.src = item.url;
+            aud.currentTime = 0;
+            aud.play();
           }
         } else {
           if (!item.audio) {
@@ -136,6 +137,7 @@ export default {
         url: "./audio/se/09/tirin1.mp3"
       }
     ],
+    seAudio: undefined,
     bgmAudio: undefined,
     bgmList: [
       {
@@ -181,6 +183,7 @@ export default {
   }),
   created() {
     this.bgmAudio = new Audio();
+    this.seAudio  = new Audio();
   }
 };
 </script>
