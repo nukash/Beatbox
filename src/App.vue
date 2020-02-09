@@ -45,8 +45,8 @@
           :key="item.id"
           fab
           x-large
-          @touchstart.prevent="playSound(item,true,ture)"
-          @mousedown="playSound(item, true,true)"
+          @touchstart.prevent="playSound(item,true,true)"
+          @mousedown="playSound(item, true, true)"
         >{{item.id}}</v-btn>
       </div>
       <div>
