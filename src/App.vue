@@ -45,8 +45,8 @@
           :key="item.id"
           fab
           x-large
-          @touchstart.prevent="playSound(item)"
-          @mousedown="playSound(item)"
+          @touchstart.prevent="playSound(item,true)"
+          @mousedown="playSound(item), true"
         >{{item.id}}</v-btn>
       </div>
       <div>
@@ -74,7 +74,7 @@ export default {
     // HelloWorld,
   },
   methods: {
-    playSound(item, singleton=false) {
+    playSound(item, singleton = false) {
       if (item.url) {
         if (singleton) {
           if (!this.bgmAudio.paused) {
