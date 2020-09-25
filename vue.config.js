@@ -1,27 +1,25 @@
 module.exports = {
-  "publicPath": "./",
-  "assetsDir": "",
-  "outputDir": "docs",
-  "devServer": {
-    "host": "localhost"
+  publicPath: "./",
+  assetsDir: "",
+  outputDir: "docs",
+  devServer: {
+    host: "localhost",
   },
-  "transpileDependencies": [
-    "vuetify"
-  ],
-  "pwa":{
+  transpileDependencies: ["vuetify"],
+  pwa: {
     workboxOptions: {
       runtimeCaching: [
         {
           urlPattern: /.*\.mp3/,
-          handler: 'cacheOnly',
+          handler: "cacheFirst",
           options: {
-            cacheName: 'mp3-cache',
+            cacheName: "mp3-cache",
             cacheableResponse: {
-              statuses: [0, 200]
-            }
-          }
-        }
-      ]
-    }
-  }
-}
+              statuses: [0, 200],
+            },
+          },
+        },
+      ],
+    },
+  },
+};
