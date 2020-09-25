@@ -11,16 +11,16 @@
  * See https://goo.gl/2aRDsh
  */
 
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
+
 importScripts(
-  "https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js"
+  "precache-manifest.5e80adcec015720668371b408f85febd.js"
 );
 
-importScripts("precache-manifest.5e80adcec015720668371b408f85febd.js");
+workbox.core.setCacheNameDetails({prefix: "beatbox"});
 
-workbox.core.setCacheNameDetails({ prefix: "beatbox" });
-
-self.addEventListener("message", (event) => {
-  if (event.data && event.data.type === "SKIP_WAITING") {
+self.addEventListener('message', (event) => {
+  if (event.data && event.data.type === 'SKIP_WAITING') {
     self.skipWaiting();
   }
 });
@@ -33,11 +33,4 @@ self.addEventListener("message", (event) => {
 self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerRoute(
-  /.*\.mp3/,
-  new workbox.strategies.CacheFirst({
-    cacheName: "mp3-cache",
-    plugins: [new workbox.cacheableResponse.Plugin({ statuses: [0, 200] })],
-  }),
-  "GET"
-);
+workbox.routing.registerRoute(/.*\.mp3/, new workbox.strategies.CacheFirst({ "cacheName":"mp3-cache", plugins: [new workbox.cacheableResponse.Plugin({ statuses: [ 0, 200 ] })] }), 'GET');
