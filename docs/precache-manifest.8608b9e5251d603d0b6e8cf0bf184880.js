@@ -5,11 +5,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   },
   {
     "revision": "37f79662682cbea4ca9ae9308aa08989",
-    "url": "audio/bgm/02/日曜の午後.mp3"
+    "url": "audio/bgm/02/sunday-afternoon.mp3"
   },
   {
     "revision": "dd5477cb16eb25f416bd9ff200265a6d",
-    "url": "audio/bgm/03/ぽかん.mp3"
+    "url": "audio/bgm/03/pokan.mp3"
   },
   {
     "revision": "42891b17159d64eb583afcda44006ff4",
@@ -17,19 +17,19 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   },
   {
     "revision": "a6e17810690770bac4ca0b8e5db3f16c",
-    "url": "audio/bgm/05/夏はsummer!!.mp3"
+    "url": "audio/bgm/05/natsu-is-summer!!.mp3"
   },
   {
     "revision": "014f61bd7dd2da24122973226e99bed8",
-    "url": "audio/bgm/06/ぐだぐだな感じ.mp3"
+    "url": "audio/bgm/06/Fickle.mp3"
   },
   {
     "revision": "c0ac1963474452dd6dc3fe9fe0db0ed7",
-    "url": "audio/bgm/07/パーティーはハチャメチャ大騒ぎ.mp3"
+    "url": "audio/bgm/07/party.mp3"
   },
   {
     "revision": "7f81ff9a3c2a2fe2505d2f9bc6311f02",
-    "url": "audio/bgm/08/モーツァルト「Dies_irae」.mp3"
+    "url": "audio/bgm/08/Dies_irae.mp3"
   },
   {
     "revision": "5f58e1c22a6cf20ff77ff59864d069a7",
@@ -112,12 +112,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "images/icons/icon-96x96.png"
   },
   {
-    "revision": "03098a2de88606479cc9678638eae6f0",
+    "revision": "d25952ef602f0f57d2932e55fc4fdc4e",
     "url": "index.html"
   },
   {
-    "revision": "32fe16e78a7be22d3956",
-    "url": "js/app.d4ae9a71.js"
+    "revision": "929000548b0ee20040bc",
+    "url": "js/app.cb8a1cd7.js"
   },
   {
     "revision": "9ab54e638f4aa92b2a90",
