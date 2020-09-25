@@ -77,8 +77,8 @@ export default {
     playSound(item, singleton = false, isSE = false) {
       if (item.url) {
         if (singleton) {
-          var aud = isSE ? this.seAudio :  this.bgmAudio;
-          if ((!aud.paused && !isSE)) {
+          var aud = isSE ? this.seAudio : this.bgmAudio;
+          if (!aud.paused && !isSE) {
             aud.pause();
           } else {
             aud.src = item.url;
@@ -96,94 +96,91 @@ export default {
           item.audio.play();
         }
       }
-    }
+    },
   },
   data: () => ({
     playList: [
       {
         id: "1",
-        url: "./audio/se/01/drum-japanese2.mp3"
+        url: "./audio/se/01/drum-japanese2.mp3",
       },
       {
         id: "2",
-        url: "./audio/se/02/trumpet1.mp3"
+        url: "./audio/se/02/trumpet1.mp3",
       },
       {
         id: "3",
-        url: "./audio/se/03/kotsudumi1.mp3"
+        url: "./audio/se/03/kotsudumi1.mp3",
       },
       {
         id: "4",
-        url: "./audio/se/04/tin1.mp3"
+        url: "./audio/se/04/tin1.mp3",
       },
       {
         id: "5",
-        url: "./audio/se/05/costume-drama1.mp3"
+        url: "./audio/se/05/costume-drama1.mp3",
       },
       {
         id: "6",
-        url: "./audio/se/06/boyon1.mp3"
+        url: "./audio/se/06/boyon1.mp3",
       },
       {
         id: "7",
-        url: "./audio/se/07/Motion-Fracture03-1.mp3"
+        url: "./audio/se/07/Motion-Fracture03-1.mp3",
       },
       {
         id: "8",
-        url: "./audio/se/08/Cut04-1.mp3"
+        url: "./audio/se/08/Cut04-1.mp3",
       },
       {
         id: "9",
-        url: "./audio/se/09/tirin1.mp3"
-      }
+        url: "./audio/se/09/tirin1.mp3",
+      },
     ],
     seAudio: undefined,
     bgmAudio: undefined,
     bgmList: [
       {
         id: 1,
-        url: "./audio/bgm/01/shuffle_shuffle.mp3"
+        url: "./audio/bgm/01/shuffle_shuffle.mp3",
       },
       {
         id: 2,
-        url: "./audio/bgm/02/%e6%97%a5%e6%9b%9c%e3%81%ae%e5%8d%88%e5%be%8c.mp3"
+        url: "./audio/bgm/02/sunday-afternoon.mp3",
       },
       {
         id: 3,
-        url: "./audio/bgm/03/%e3%81%bd%e3%81%8b%e3%82%93.mp3"
+        url: "./audio/bgm/03/pokan.mp3",
       },
       {
         id: 4,
-        url: "./audio/bgm/04/n74.mp3"
+        url: "./audio/bgm/04/n74.mp3",
       },
       {
         id: 5,
-        url: "./audio/bgm/05/%e5%a4%8f%e3%81%afsummer!!.mp3"
+        url: "./audio/bgm/05/natsu-is-summer!!.mp3",
       },
       {
         id: 6,
-        url:
-          "./audio/bgm/06/%e3%81%90%e3%81%a0%e3%81%90%e3%81%a0%e3%81%aa%e6%84%9f%e3%81%98.mp3"
+        url: "./audio/bgm/06/Fickle.mp3",
       },
       {
         id: 7,
-        url:
-          "./audio/bgm/07/%e3%83%91%e3%83%bc%e3%83%86%e3%82%a3%e3%83%bc%e3%81%af%e3%83%8f%e3%83%81%e3%83%a3%e3%83%a1%e3%83%81%e3%83%a3%e5%a4%a7%e9%a8%92%e3%81%8e.mp3"
+        url: "./audio/bgm/07/party.mp3",
       },
       {
         id: 8,
-        url:
-          "./audio/bgm/08/%e3%83%a2%e3%83%bc%e3%83%84%e3%82%a1%e3%83%ab%e3%83%88%e3%80%8cDies_irae%e3%80%8d.mp3"
+        url: "./audio/bgm/08/Dies_irae.mp3",
       },
       {
         id: 9,
-        url: "./audio/bgm/09/Crystal_thorn.mp3"
-      }
-    ]
+        url: "./audio/bgm/09/Crystal_thorn.mp3",
+      },
+    ],
   }),
   created() {
     this.bgmAudio = new Audio();
-    this.seAudio  = new Audio();
-  }
+    this.seAudio = new Audio();
+  },
 };
 </script>
