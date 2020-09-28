@@ -1,29 +1,6 @@
-/**
- * Welcome to your Workbox-powered service worker!
- *
- * You'll need to register this file in your web app and you should
- * disable HTTP caching for this file too.
- * See https://goo.gl/nhQhGp
- *
- * The rest of the code is auto-generated. Please don't update this file
- * directly; instead, make changes to your Workbox build configuration
- * and re-run your build process.
- * See https://goo.gl/2aRDsh
- */
+importScripts("precache-manifest.57b1f7983a80fbf82cbb892db5ae8840.js", "https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
-importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
-
-importScripts(
-  "precache-manifest.57b1f7983a80fbf82cbb892db5ae8840.js"
-);
-
-workbox.core.setCacheNameDetails({prefix: "beatbox"});
-
-self.addEventListener('message', (event) => {
-  if (event.data && event.data.type === 'SKIP_WAITING') {
-    self.skipWaiting();
-  }
-});
+workbox.core.setCacheNameDetails({ prefix: "my-project" });
 
 /**
  * The workboxSW.precacheAndRoute() method efficiently caches and responds to
@@ -31,6 +8,29 @@ self.addEventListener('message', (event) => {
  * See https://goo.gl/S9QRab
  */
 self.__precacheManifest = [].concat(self.__precacheManifest || []);
+workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerRoute(/.*\.mp3/, new workbox.strategies.CacheFirst({ "cacheName":"mp3-cache", plugins: [new workbox.cacheableResponse.Plugin({ statuses: [ 0, 200 ] })] }), 'GET');
+import { registerRoute } from "workbox-routing";
+import { CacheFirst } from "workbox-strategies";
+import { CacheableResponsePlugin } from "workbox-cacheable-response";
+import { RangeRequestsPlugin } from "workbox-range-requests";
+
+// In your service worker:
+// It's up to you to either precache or explicitly call cache.add('movie.mp4')
+// to populate the cache.
+//
+// This route will go against the network if there isn't a cache match,
+// but it won't populate the cache at runtime.
+// If there is a cache match, then it will properly serve partial responses.
+registerRoute(
+  ({ url }) => url.pathname.endsWith(".mp3"),
+  new CacheFirst({
+    cacheName: "your-cache-name-here",
+    plugins: [
+      new CacheableResponsePlugin({ statuses: [200] }),
+      new RangeRequestsPlugin(),
+    ],
+  })
+);
+
