@@ -7,19 +7,22 @@ module.exports = {
   },
   transpileDependencies: ["vuetify"],
   pwa: {
+    workboxPluginMode: "InjectManifest",
     workboxOptions: {
-      runtimeCaching: [
-        {
-          urlPattern: /.*\.mp3/,
-          handler: "cacheFirst",
-          options: {
-            cacheName: "mp3-cache",
-            cacheableResponse: {
-              statuses: [0, 200],
-            },
-          },
-        },
-      ],
+      swSrc: "src/service-worker.js",
+      swDest: "service-worker.js",
+      // runtimeCaching: [
+      //   {
+      //     urlPattern: /.*\.mp3/,
+      //     handler: "cacheFirst",
+      //     options: {
+      //       cacheName: "mp3-cache",
+      //       cacheableResponse: {
+      //         statuses: [0, 200],
+      //       },
+      //     },
+      //   },
+      // ],
     },
   },
 };
