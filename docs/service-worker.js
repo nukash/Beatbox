@@ -13,7 +13,7 @@ workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
 workbox.routing.registerRoute(
   ({ url }) => url.pathname.endsWith(".mp3"),
-  new workbox.strategies.cacheFirst({
+  new workbox.strategies.CacheFirst({
     cacheName: "mp3-caching",
     plugins: [
       new workbox.cacheableResponse.Plugin({
