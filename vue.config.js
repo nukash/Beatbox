@@ -11,6 +11,9 @@ module.exports = {
     workboxOptions: {
       swSrc: "src/service-worker.js",
       swDest: "service-worker.js",
+      globDirectory: "docs",
+      globPatterns: ["*.{html,js,css,png}"],
+
       // runtimeCaching: [
       //   {
       //     urlPattern: /.*\.mp3/,
