@@ -19,7 +19,7 @@ workbox.routing.registerRoute(
       new workbox.cacheableResponse.Plugin({
         statuses: [200],
       }),
-      new workbox.rangeRequet.Plugin(),
+      new workbox.rangeRequets.Plugin(),
     ],
   })
 );
