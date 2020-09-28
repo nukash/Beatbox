@@ -9,7 +9,7 @@ workbox.core.setCacheNameDetails({ prefix: "my-project" });
  */
 self.__precacheManifest = [].concat(self.__precacheManifest || []);
 // workbox.precaching.suppressWarnings();
-workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
+// workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
 workbox.routing.registerRoute(
   ({ url }) => url.pathname.endsWith(".mp3"),
