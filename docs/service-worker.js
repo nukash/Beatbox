@@ -11,25 +11,15 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-import { registerRoute } from "workbox-routing";
-import { CacheFirst } from "workbox-strategies";
-import { CacheableResponsePlugin } from "workbox-cacheable-response";
-import { RangeRequestsPlugin } from "workbox-range-requests";
-
-// In your service worker:
-// It's up to you to either precache or explicitly call cache.add('movie.mp4')
-// to populate the cache.
-//
-// This route will go against the network if there isn't a cache match,
-// but it won't populate the cache at runtime.
-// If there is a cache match, then it will properly serve partial responses.
-registerRoute(
+workbox.routing.registerRoute(
   ({ url }) => url.pathname.endsWith(".mp3"),
-  new CacheFirst({
-    cacheName: "your-cache-name-here",
+  new workbox.strategies.cacheFirst({
+    cacheName: "mp3-caching",
     plugins: [
-      new CacheableResponsePlugin({ statuses: [200] }),
-      new RangeRequestsPlugin(),
+      new workbox.cacheableResponse.CacheableResponsePlugin({
+        statuses: [200],
+      }),
+      new workbox.rangeRequet.RangeRequestsPlugin(),
     ],
   })
 );
