@@ -1,6 +1,29 @@
-importScripts("precache-manifest.57b1f7983a80fbf82cbb892db5ae8840.js", "https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
+/**
+ * Welcome to your Workbox-powered service worker!
+ *
+ * You'll need to register this file in your web app and you should
+ * disable HTTP caching for this file too.
+ * See https://goo.gl/nhQhGp
+ *
+ * The rest of the code is auto-generated. Please don't update this file
+ * directly; instead, make changes to your Workbox build configuration
+ * and re-run your build process.
+ * See https://goo.gl/2aRDsh
+ */
 
-workbox.core.setCacheNameDetails({ prefix: "my-project" });
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
+
+importScripts(
+  "precache-manifest.f0a6aba0c8a2d439d8c6c0642273a417.js"
+);
+
+workbox.core.setCacheNameDetails({prefix: "beatbox"});
+
+self.addEventListener('message', (event) => {
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    self.skipWaiting();
+  }
+});
 
 /**
  * The workboxSW.precacheAndRoute() method efficiently caches and responds to
@@ -8,19 +31,6 @@ workbox.core.setCacheNameDetails({ prefix: "my-project" });
  * See https://goo.gl/S9QRab
  */
 self.__precacheManifest = [].concat(self.__precacheManifest || []);
-// workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerRoute(
-  ({ url }) => url.pathname.endsWith(".mp3"),
-  new workbox.strategies.cacheFirst({
-    cacheName: "mp3-caching",
-    plugins: [
-      new workbox.cacheableResponse.CacheableResponsePlugin({
-        statuses: [200],
-      }),
-      new workbox.rangeRequet.RangeRequestsPlugin(),
-    ],
-  })
-);
-
+workbox.routing.registerRoute(/.*\.mp3/, new workbox.strategies.CacheFirst({ "cacheName":"mp3-cache", plugins: [new workbox.cacheableResponse.Plugin({ statuses: [ 0, 200 ] })] }), 'GET');
