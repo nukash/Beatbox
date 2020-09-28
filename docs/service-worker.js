@@ -16,10 +16,10 @@ workbox.routing.registerRoute(
   new workbox.strategies.cacheFirst({
     cacheName: "mp3-caching",
     plugins: [
-      new workbox.cacheableResponse.CacheableResponsePlugin({
+      new workbox.cacheableResponse.Plugin({
         statuses: [200],
       }),
-      new workbox.rangeRequet.RangeRequestsPlugin(),
+      new workbox.rangeRequet.Plugin(),
     ],
   })
 );
