@@ -23,10 +23,13 @@
       </div>
 
       <v-spacer></v-spacer>
-
+      <v-btn text v-if="updateExists" @click="refreshApp">
+        <v-icon>mdi-restart-alert</v-icon>New Version Avairable
+      </v-btn>
       <v-btn text @click="unregisterSW">
         <!-- <span class="mr-2">Latest Release</span> -->
         <v-icon>mdi-reload</v-icon>
+        <!-- <v-icon>{{reloadSvg}}</v-icon> -->
       </v-btn>
     </v-app-bar>
 
@@ -62,6 +65,7 @@
 
 <script>
 // import HelloWorld from './components/HelloWorld';
+// import { mdiReload } from "@mdi/js";
 
 export default {
   name: "App",
@@ -95,6 +99,18 @@ export default {
     },
     unregisterSW() {
       window.location.reload(true);
+    },
+
+    showRefreshUI(e) {
+      this.registration = e.detail;
+      this.updateExists = true;
+    },
+    refreshApp() {
+      this.updateExists = false;
+      if (!this.registration || !this.registration.waiting) {
+        return;
+      }
+      this.registration.waiting.postMessage("skipWaiting");
     },
   },
   data: () => ({
@@ -176,10 +192,22 @@ export default {
         url: "./audio/bgm/09/Crystal_thorn.mp3",
       },
     ],
+    refreshing: false,
+    registration: null,
+    updateExists: false,
+    // reloadSvg: mdiReload,
   }),
   created() {
     this.bgmAudio = new Audio();
     this.seAudio = new Audio();
+
+    // ここからPWAアップデート用ロジック
+    document.addEventListener("swUpdated", this.showRefreshUI, { once: true });
+    navigator.serviceWorker.addEventListener("controllerchange", () => {
+      if (this.refreshing) return;
+      this.refreshing = true;
+      window.location.reload(true);
+    });
   },
 };
 </script>
