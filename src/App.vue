@@ -126,34 +126,34 @@ export default {
         id: "2",
         url: "./audio/se/02/trumpet1.mp3",
       },
-      // {
-      //   id: "3",
-      //   url: "./audio/se/03/kotsudumi1.mp3",
-      // },
-      // {
-      //   id: "4",
-      //   url: "./audio/se/04/tin1.mp3",
-      // },
-      // {
-      //   id: "5",
-      //   url: "./audio/se/05/costume-drama1.mp3",
-      // },
-      // {
-      //   id: "6",
-      //   url: "./audio/se/06/boyon1.mp3",
-      // },
-      // {
-      //   id: "7",
-      //   url: "./audio/se/07/Motion-Fracture03-1.mp3",
-      // },
-      // {
-      //   id: "8",
-      //   url: "./audio/se/08/Cut04-1.mp3",
-      // },
-      // {
-      //   id: "9",
-      //   url: "./audio/se/09/tirin1.mp3",
-      // },
+      {
+        id: "3",
+        url: "./audio/se/03/kotsudumi1.mp3",
+      },
+      {
+        id: "4",
+        url: "./audio/se/04/tin1.mp3",
+      },
+      {
+        id: "5",
+        url: "./audio/se/05/costume-drama1.mp3",
+      },
+      {
+        id: "6",
+        url: "./audio/se/06/boyon1.mp3",
+      },
+      {
+        id: "7",
+        url: "./audio/se/07/Motion-Fracture03-1.mp3",
+      },
+      {
+        id: "8",
+        url: "./audio/se/08/Cut04-1.mp3",
+      },
+      {
+        id: "9",
+        url: "./audio/se/09/tirin1.mp3",
+      },
     ],
     seAudio: undefined,
     bgmAudio: undefined,
@@ -162,38 +162,38 @@ export default {
         id: 1,
         url: "./audio/bgm/01/shuffle_shuffle.mp3",
       },
-      // {
-      //   id: 2,
-      //   url: "./audio/bgm/02/sunday-afternoon.mp3",
-      // },
-      // {
-      //   id: 3,
-      //   url: "./audio/bgm/03/pokan.mp3",
-      // },
-      // {
-      //   id: 4,
-      //   url: "./audio/bgm/04/n74.mp3",
-      // },
-      // {
-      //   id: 5,
-      //   url: "./audio/bgm/05/natsu-is-summer!!.mp3",
-      // },
-      // {
-      //   id: 6,
-      //   url: "./audio/bgm/06/Fickle.mp3",
-      // },
-      // {
-      //   id: 7,
-      //   url: "./audio/bgm/07/party.mp3",
-      // },
-      // {
-      //   id: 8,
-      //   url: "./audio/bgm/08/Dies_irae.mp3",
-      // },
-      // {
-      //   id: 9,
-      //   url: "./audio/bgm/09/Crystal_thorn.mp3",
-      // },
+      {
+        id: 2,
+        url: "./audio/bgm/02/sunday-afternoon.mp3",
+      },
+      {
+        id: 3,
+        url: "./audio/bgm/03/pokan.mp3",
+      },
+      {
+        id: 4,
+        url: "./audio/bgm/04/n74.mp3",
+      },
+      {
+        id: 5,
+        url: "./audio/bgm/05/natsu-is-summer!!.mp3",
+      },
+      {
+        id: 6,
+        url: "./audio/bgm/06/Fickle.mp3",
+      },
+      {
+        id: 7,
+        url: "./audio/bgm/07/party.mp3",
+      },
+      {
+        id: 8,
+        url: "./audio/bgm/08/Dies_irae.mp3",
+      },
+      {
+        id: 9,
+        url: "./audio/bgm/09/Crystal_thorn.mp3",
+      },
     ],
     refreshing: false,
     registration: null,
