@@ -18,8 +18,6 @@ self.addEventListener("message", (e) => {
 workbox.core.clientsClaim(); // Vue CLI 4 and Workbox v4, else
 // workbox.clientsClaim(); // Vue CLI 3 and Workbox v3.
 
-workbox.precaching.precacheAndRoute(self.__precacheManifest || []);
-
 workbox.routing.registerRoute(
   ({ url }) => url.pathname.endsWith(".mp3"),
   new workbox.strategies.CacheFirst({
@@ -36,3 +34,5 @@ workbox.routing.registerRoute(
     },
   })
 );
+
+workbox.precaching.precacheAndRoute(self.__precacheManifest || []);
