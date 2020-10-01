@@ -24,7 +24,7 @@ const cacheKeyWillBeUsed = ({ request }) => {
 };
 workbox.routing.registerRoute(
   ({ url }) => url.pathname.endsWith(".mp3"),
-  new workbox.strategies.CacheFirst({
+  new workbox.strategies.CacheOnly({
     // cacheName: "mp3-caching",
     cacheName: workbox.core.cacheName.precaching,
     plugins: [
