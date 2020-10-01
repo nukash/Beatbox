@@ -38,27 +38,30 @@
       <!-- <div :v-for="item in playList">
         <v-btn fab x-large >{{item.id}}</v-btn>
       </div>-->
-      <div>
-        <v-btn
-          v-for="item in playList"
-          :key="item.id"
-          fab
-          x-large
-          @touchstart.prevent="playSound(item,true,true)"
-          @mousedown="playSound(item, true, true)"
-        >{{item.id}}</v-btn>
-      </div>
-      <div>
-        <v-btn
-          v-for="item in bgmList"
-          :key="item.id"
-          fab
-          color="primary"
-          x-large
-          @touchstart.prevent="playSound(item, true)"
-          @mousedown="playSound(item, true)"
-        >{{item.id}}</v-btn>
-      </div>
+      <v-container>
+        <v-row justify="start" align-content="center">
+          <v-col cols="4" sm="2" v-for="item in playList" :key="item.id">
+            <v-btn
+              block
+              x-large
+              @touchstart.prevent="playSound(item,true,true)"
+              @mousedown="playSound(item, true, true)"
+            >{{item.id}}</v-btn>
+          </v-col>
+        </v-row>
+
+        <v-row justify="start" align-content="center">
+          <v-col cols="4" sm="2" v-for="item in bgmList" :key="item.id">
+            <v-btn
+              block
+              color="primary"
+              x-large
+              @touchstart.prevent="playSound(item, true)"
+              @mousedown="playSound(item, true)"
+            >{{item.id}}</v-btn>
+          </v-col>
+        </v-row>
+      </v-container>
     </v-content>
   </v-app>
 </template>
