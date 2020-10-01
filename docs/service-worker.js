@@ -32,6 +32,10 @@ workbox.routing.registerRoute(
       }),
       new workbox.rangeRequests.Plugin(),
     ],
+    matchOptions: {
+      ignoreSearch: true,
+      ignoreVary: true,
+    },
   })
 );
 
