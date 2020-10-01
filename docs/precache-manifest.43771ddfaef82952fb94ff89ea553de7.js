@@ -1,15 +1,83 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
+    "revision": "115a83ba7f3471f44a108c54697111fe",
+    "url": "audio/bgm/01/shuffle_shuffle.mp3"
+  },
+  {
+    "revision": "37f79662682cbea4ca9ae9308aa08989",
+    "url": "audio/bgm/02/sunday-afternoon.mp3"
+  },
+  {
+    "revision": "dd5477cb16eb25f416bd9ff200265a6d",
+    "url": "audio/bgm/03/pokan.mp3"
+  },
+  {
+    "revision": "42891b17159d64eb583afcda44006ff4",
+    "url": "audio/bgm/04/n74.mp3"
+  },
+  {
+    "revision": "a6e17810690770bac4ca0b8e5db3f16c",
+    "url": "audio/bgm/05/natsu-is-summer!!.mp3"
+  },
+  {
+    "revision": "014f61bd7dd2da24122973226e99bed8",
+    "url": "audio/bgm/06/Fickle.mp3"
+  },
+  {
+    "revision": "c0ac1963474452dd6dc3fe9fe0db0ed7",
+    "url": "audio/bgm/07/party.mp3"
+  },
+  {
+    "revision": "7f81ff9a3c2a2fe2505d2f9bc6311f02",
+    "url": "audio/bgm/08/Dies_irae.mp3"
+  },
+  {
+    "revision": "5f58e1c22a6cf20ff77ff59864d069a7",
+    "url": "audio/bgm/09/Crystal_thorn.mp3"
+  },
+  {
+    "revision": "a1d5eb301f7bec89a8005947f0ac8c40",
+    "url": "audio/bgm/なんでしょう？.mp3"
+  },
+  {
+    "revision": "9f3365700bb199f1b66d43fa5b37a858",
+    "url": "audio/se/01/drum-japanese2.mp3"
+  },
+  {
+    "revision": "aff903e0d35b153f05be834284670918",
+    "url": "audio/se/02/trumpet1.mp3"
+  },
+  {
+    "revision": "544cedec590097c0cd6876880abd666b",
+    "url": "audio/se/03/kotsudumi1.mp3"
+  },
+  {
+    "revision": "33cc354d977a291867b969d3d3ca4512",
+    "url": "audio/se/04/tin1.mp3"
+  },
+  {
+    "revision": "e2b6a29b32d8dd2f9a5ce500e55d9d81",
+    "url": "audio/se/05/costume-drama1.mp3"
+  },
+  {
+    "revision": "7b224f8209cb4e8b3797431e8915a240",
+    "url": "audio/se/06/boyon1.mp3"
+  },
+  {
+    "revision": "ccd90db1cf981b3e2adbf4b08ac2ee25",
+    "url": "audio/se/07/Motion-Fracture03-1.mp3"
+  },
+  {
+    "revision": "b4a2d27d8352f97ffaa3f86b52c9c3c1",
+    "url": "audio/se/08/Cut04-1.mp3"
+  },
+  {
+    "revision": "c9091a60eea54b537e8778ffab66ed2e",
+    "url": "audio/se/09/tirin1.mp3"
+  },
+  {
     "revision": "2628a832b4b1f6a9cc23",
     "url": "css/chunk-vendors.462018f4.css"
-  },
-  {
-    "revision": "2628a832b4b1f6a9cc23",
-    "url": "css/chunk-vendors.462018f4.css.map"
-  },
-  {
-    "revision": "1ba2ae710d927f13d483fd5d1e548c9b",
-    "url": "favicon.ico"
   },
   {
     "revision": "313a65630d341645c13e4f2a0364381d",
@@ -156,62 +224,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "images/icons/icon-96x96.png"
   },
   {
-    "revision": "376b3c7022e000db0d08667c904028f2",
-    "url": "img/icons/Sketch011.png"
-  },
-  {
-    "revision": "f130a0b70e386170cf6f011c0ca8c4f4",
-    "url": "img/icons/android-chrome-192x192.png"
-  },
-  {
-    "revision": "0ff1bc4d14e5c9abcacba7c600d97814",
-    "url": "img/icons/android-chrome-512x512.png"
-  },
-  {
-    "revision": "936d6e411cabd71f0e627011c3f18fe2",
-    "url": "img/icons/apple-touch-icon-120x120.png"
-  },
-  {
-    "revision": "1a034e64d80905128113e5272a5ab95e",
-    "url": "img/icons/apple-touch-icon-152x152.png"
-  },
-  {
-    "revision": "c43cd371a49ee4ca17ab3a60e72bdd51",
-    "url": "img/icons/apple-touch-icon-180x180.png"
-  },
-  {
-    "revision": "9a2b5c0f19de617685b7b5b42464e7db",
-    "url": "img/icons/apple-touch-icon-60x60.png"
-  },
-  {
-    "revision": "af28d69d59284dd202aa55e57227b11b",
-    "url": "img/icons/apple-touch-icon-76x76.png"
-  },
-  {
-    "revision": "66830ea6be8e7e94fb55df9f7b778f2e",
-    "url": "img/icons/apple-touch-icon.png"
-  },
-  {
-    "revision": "4bb1a55479d61843b89a2fdafa7849b3",
-    "url": "img/icons/favicon-16x16.png"
-  },
-  {
-    "revision": "98b614336d9a12cb3f7bedb001da6fca",
-    "url": "img/icons/favicon-32x32.png"
-  },
-  {
-    "revision": "b89032a4a5a1879f30ba05a13947f26f",
-    "url": "img/icons/msapplication-icon-144x144.png"
-  },
-  {
-    "revision": "058a3335d15a3eb84e7ae3707ba09620",
-    "url": "img/icons/mstile-150x150.png"
-  },
-  {
-    "revision": "f22d501a35a87d9f21701cb031f6ea17",
-    "url": "img/icons/safari-pinned-tab.svg"
-  },
-  {
     "revision": "d151aa861ad6486a8f71565144354fdb",
     "url": "index.html"
   },
@@ -220,16 +232,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "js/app.0a4cd2a7.js"
   },
   {
-    "revision": "a942928d28a91cd04ff8",
-    "url": "js/app.0a4cd2a7.js.map"
-  },
-  {
     "revision": "2628a832b4b1f6a9cc23",
     "url": "js/chunk-vendors.75395468.js"
-  },
-  {
-    "revision": "2628a832b4b1f6a9cc23",
-    "url": "js/chunk-vendors.75395468.js.map"
   },
   {
     "revision": "d19f1e12b25bdccd5ab2790fab3ba4cc",
