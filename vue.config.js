@@ -11,7 +11,7 @@ module.exports = {
     workboxOptions: {
       swSrc: "src/service-worker.js",
       swDest: "service-worker.js",
-      exclude: [/\.mp3$/],
+      // exclude: [/\.mp3$/],
 
       // runtimeCaching: [
       //   {
