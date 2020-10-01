@@ -40,7 +40,7 @@
       </div>-->
       <v-container>
         <v-row justify="start" align-content="center">
-          <v-col cols="4" sm="2" v-for="item in playList" :key="item.id">
+          <v-col cols="4" sm="1" v-for="item in playList" :key="item.id">
             <v-btn
               block
               x-large
@@ -51,7 +51,7 @@
         </v-row>
 
         <v-row justify="start" align-content="center">
-          <v-col cols="4" sm="2" v-for="item in bgmList" :key="item.id">
+          <v-col cols="4" sm="1" v-for="item in bgmList" :key="item.id">
             <v-btn
               block
               color="primary"
