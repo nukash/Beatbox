@@ -21,7 +21,8 @@ workbox.core.clientsClaim(); // Vue CLI 4 and Workbox v4, else
 workbox.routing.registerRoute(
   ({ url }) => url.pathname.endsWith(".mp3"),
   new workbox.strategies.CacheFirst({
-    cacheName: "mp3-caching",
+    // cacheName: "mp3-caching",
+    cacheName: workbox.core.cacheName.precaching,
     plugins: [
       new workbox.cacheableResponse.Plugin({
         statuses: [200],
@@ -35,4 +36,6 @@ workbox.routing.registerRoute(
   })
 );
 
+console.log(self.__WB_MANIFEST);
+console.log(self.__precacheManifest);
 workbox.precaching.precacheAndRoute(self.__precacheManifest || []);
