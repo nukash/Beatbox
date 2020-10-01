@@ -18,15 +18,20 @@ self.addEventListener("message", (e) => {
 workbox.core.clientsClaim(); // Vue CLI 4 and Workbox v4, else
 // workbox.clientsClaim(); // Vue CLI 3 and Workbox v3.
 
+const cacheKeyWillBeUsed = ({ request }) => {
+  const url = workbox.precaching.getCacheKeyForURL(request.url);
+  return new Request(url, { headers: request.headers });
+};
 workbox.routing.registerRoute(
   ({ url }) => url.pathname.endsWith(".mp3"),
   new workbox.strategies.CacheFirst({
     // cacheName: "mp3-caching",
     cacheName: workbox.core.cacheName.precaching,
     plugins: [
-      new workbox.cacheableResponse.Plugin({
-        statuses: [200],
-      }),
+      // new workbox.cacheableResponse.Plugin({
+      //   statuses: [200],
+      // }),
+      { cacheKeyWillBeUsed },
       new workbox.rangeRequests.Plugin(),
     ],
     matchOptions: {
