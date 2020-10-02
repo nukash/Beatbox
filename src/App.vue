@@ -109,7 +109,7 @@ export default {
           }
           item.audio
             .play()
-            .then((_) => console("bgm stopped."))
+            .then((_) => console("se stopped."))
             .catch((error) => console.error(error));
         }
       }
