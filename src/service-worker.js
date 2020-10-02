@@ -22,6 +22,18 @@ const cacheKeyWillBeUsed = ({ request }) => {
   const url = workbox.precaching.getCacheKeyForURL(request.url);
   return new Request(url, { headers: request.headers });
 };
+
+importScripts("./workbox-utils.js");
+// const RUNTIME_CACHE_NAME = `${APP_CACHE_PREFIX}-runtime-${APP_CACHE_SUFFIX}`;
+// Create runtime Route.
+const runtimeRoute = new WorkboxCacheBeforeCacheOnly(
+  self,
+  "beatbox-runtime",
+  self.__precacheManifest || []
+);
+// Register runtime Route.
+workbox.routing.registerRoute(runtimeRoute.match, runtimeRoute);
+
 workbox.routing.registerRoute(
   ({ url }) => url.pathname.endsWith(".mp3"),
   new workbox.strategies.CacheOnly({
