@@ -76,8 +76,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "audio/se/09/tirin1.mp3"
   },
   {
-    "revision": "2628a832b4b1f6a9cc23",
-    "url": "css/chunk-vendors.462018f4.css"
+    "revision": "4c0198e52fb8d5375b33",
+    "url": "css/chunk-vendors.2834daae.css"
   },
   {
     "revision": "313a65630d341645c13e4f2a0364381d",
@@ -224,16 +224,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "images/icons/icon-96x96.png"
   },
   {
-    "revision": "2ecf1aef2d0d0b5253b96b5a3fe5f155",
+    "revision": "c661c823620242c49fe4b8daa9832dcd",
     "url": "index.html"
   },
   {
-    "revision": "c523494f3aff9d364d91",
-    "url": "js/app.b91d2043.js"
+    "revision": "05cbf57be8662f6d58ec",
+    "url": "js/app.87456e54.js"
   },
   {
-    "revision": "2628a832b4b1f6a9cc23",
-    "url": "js/chunk-vendors.75395468.js"
+    "revision": "4c0198e52fb8d5375b33",
+    "url": "js/chunk-vendors.65a02dd8.js"
   },
   {
     "revision": "d19f1e12b25bdccd5ab2790fab3ba4cc",
