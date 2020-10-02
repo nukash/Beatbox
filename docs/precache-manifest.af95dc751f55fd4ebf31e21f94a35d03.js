@@ -246,5 +246,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "b6216d61c03e6ce0c9aea6ca7808f7ca",
     "url": "robots.txt"
+  },
+  {
+    "revision": "e21f46f366c2c6dea9df59e8b1c36e21",
+    "url": "workbox-utils.js"
   }
 ]);
