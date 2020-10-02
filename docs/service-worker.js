@@ -40,7 +40,7 @@ workbox.routing.registerRoute(
   ({ url }) => url.pathname.endsWith(".mp3"),
   new workbox.strategies.CacheOnly({
     // cacheName: "mp3-caching",
-    cacheName: workbox.core.cacheName.precaching,
+    cacheName: workbox.core.cacheNames.precaching,
     plugins: [
       // new workbox.cacheableResponse.Plugin({
       //   statuses: [200],
