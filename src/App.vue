@@ -41,12 +41,18 @@
       <v-container>
         <v-row justify="start" align-content="center">
           <v-col cols="4" sm="1" v-for="item in playList" :key="item.id">
+            <!-- <audio
+              :src="item.url"
+              preload="none"
+              crossorigin="anonymous"
+            ></audio> -->
             <v-btn
               block
               x-large
-              @touchstart.prevent="playSound(item,true,true)"
+              @touchstart.prevent="playSound(item, true, true)"
               @mousedown="playSound(item, true, true)"
-            >{{item.id}}</v-btn>
+              >{{ item.id }}</v-btn
+            >
           </v-col>
         </v-row>
 
@@ -58,7 +64,8 @@
               x-large
               @touchstart.prevent="playSound(item, true)"
               @mousedown="playSound(item, true)"
-            >{{item.id}}</v-btn>
+              >{{ item.id }}</v-btn
+            >
           </v-col>
         </v-row>
       </v-container>
@@ -91,6 +98,7 @@ export default {
         } else {
           if (!item.audio) {
             item.audio = new Audio(item.url);
+            item.audio.crossOrigin = "anonymous";
           }
 
           if (!item.audio.paused) {
