@@ -67,5 +67,5 @@ workbox.routing.registerRoute(
 
 console.log(self.__WB_MANIFEST);
 console.log(self.__precacheManifest);
-workbox.precaching.precacheAndRoute(self.__precacheManifest || []);
+// workbox.precaching.precacheAndRoute(self.__precacheManifest || []);
 
