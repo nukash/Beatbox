@@ -15,6 +15,16 @@ self.addEventListener("message", (e) => {
   }
 });
 
+const APP_CACHE_PREFIX = "beatbox";
+const APP_CACHE_SUFFIX = "v0.0.1";
+
+workbox.core.setCacheNameDetails({
+  prefix: APP_CACHE_PREFIX,
+  suffix: APP_CACHE_SUFFIX,
+  precache: "installtime",
+  runtime: "runtime",
+});
+
 workbox.core.clientsClaim(); // Vue CLI 4 and Workbox v4, else
 // workbox.clientsClaim(); // Vue CLI 3 and Workbox v3.
 
@@ -24,11 +34,11 @@ const cacheKeyWillBeUsed = ({ request }) => {
 };
 
 importScripts("./workbox-utils.js");
-// const RUNTIME_CACHE_NAME = `${APP_CACHE_PREFIX}-runtime-${APP_CACHE_SUFFIX}`;
+const RUNTIME_CACHE_NAME = `${APP_CACHE_PREFIX}-runtime-${APP_CACHE_SUFFIX}`;
 // Create runtime Route.
 const runtimeRoute = new WorkboxCacheBeforeCacheOnly(
   self,
-  "beatbox-runtime",
+  RUNTIME_CACHE_NAME,
   self.__precacheManifest || []
 );
 // Register runtime Route.
