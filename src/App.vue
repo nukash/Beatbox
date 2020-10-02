@@ -95,8 +95,8 @@ export default {
             aud.currentTime = 0;
             aud
               .play()
-              .then(() => console("bgm stopped."))
-              .catch((error) => console.error(error));
+              .then(() => this.log("bgm stopped."))
+              .catch((error) => this.logerror(error));
           }
         } else {
           if (!item.audio) {
@@ -109,10 +109,16 @@ export default {
           }
           item.audio
             .play()
-            .then(() => console("se stopped."))
-            .catch((error) => console.error(error));
+            .then(() => this.log("se stopped."))
+            .catch((error) => this.logerror(error));
         }
       }
+    },
+    log(msg) {
+      console.log(msg);
+    },
+    logerr(msg) {
+      console.error(msg);
     },
     unregisterSW() {
       window.location.reload(true);
