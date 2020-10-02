@@ -74,6 +74,7 @@
 </template>
 
 <script>
+/* eslint-disable no-console */
 // import HelloWorld from './components/HelloWorld';
 // import { mdiReload } from "@mdi/js";
 
@@ -85,6 +86,8 @@ export default {
   },
   methods: {
     playSound(item, singleton = false, isSE = false) {
+      let self = this;
+
       if (item.url) {
         if (singleton) {
           var aud = isSE ? this.seAudio : this.bgmAudio;
@@ -95,8 +98,8 @@ export default {
             aud.currentTime = 0;
             aud
               .play()
-              .then(() => this.log("bgm stopped."))
-              .catch((error) => this.logerror(error));
+              .then(() => self.log("bgm stopped."))
+              .catch((error) => self.logerror(error));
           }
         } else {
           if (!item.audio) {
@@ -109,8 +112,8 @@ export default {
           }
           item.audio
             .play()
-            .then(() => this.log("se stopped."))
-            .catch((error) => this.logerror(error));
+            .then(() => self.log("se stopped."))
+            .catch((error) => self.logerror(error));
         }
       }
     },
