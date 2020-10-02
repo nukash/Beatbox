@@ -70,10 +70,10 @@ function WorkboxCacheBeforeCacheOnly(
   const myCacheOnlyRouteHandler = new workbox.strategies.CacheOnly({
     cacheName: CACHE_NAME,
     plugins: [
-      new workbox.cacheableResponse.CacheableResponsePlugin({
+      new workbox.cacheableResponse.Plugin({
         statuses: [200],
       }),
-      new workbox.rangeRequests.RangeRequestsPlugin(),
+      new workbox.rangeRequests.Plugin(),
     ],
     matchOptions: {
       // This is needed since cached resources have a ?_WB_REVISION=... URL param added to them.
