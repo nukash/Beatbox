@@ -1,4 +1,4 @@
-importScripts("precache-manifest.2bbb2298d278c22900dd68d2aa7b9285.js", "https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
+importScripts("precache-manifest.78fef0d552ab258cc96c8a25c0023eb3.js", "https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
   "https://cdn.jsdelivr.net/gh/daffinm/pwa-utils@latest/js/debug-console.js"
