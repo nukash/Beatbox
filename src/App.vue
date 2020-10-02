@@ -96,7 +96,7 @@ export default {
             aud
               .play()
               .then((_) => console("bgm stopped."))
-              .catch((error) => console.errr(error));
+              .catch((error) => console.error(error));
           }
         } else {
           if (!item.audio) {
@@ -110,7 +110,7 @@ export default {
           item.audio
             .play()
             .then((_) => console("bgm stopped."))
-            .catch((error) => console.errr(error));
+            .catch((error) => console.error(error));
         }
       }
     },
