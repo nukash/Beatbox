@@ -1,5 +1,11 @@
 importScripts("precache-manifest.2170a742aeabae3cb456ff1dca6b670b.js", "https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
+importScripts(
+  "https://cdn.jsdelivr.net/gh/daffinm/pwa-utils@latest/js/debug-console.js"
+);
+const debug = new DebugConsole(DEBUG_LOGGING, `${APP_VERSION}`, "indianred");
+debug.heading(`SERVICE WORKER STARTING`);
+
 // This is the code piece that GenerateSW mode can't provide for us.
 // This code listens for the user's confirmation to update the app.
 self.addEventListener("message", (e) => {
