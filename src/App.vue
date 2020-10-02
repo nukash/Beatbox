@@ -95,7 +95,7 @@ export default {
             aud.currentTime = 0;
             aud
               .play()
-              .then((_) => console("bgm stopped."))
+              .then(() => console("bgm stopped."))
               .catch((error) => console.error(error));
           }
         } else {
@@ -109,7 +109,7 @@ export default {
           }
           item.audio
             .play()
-            .then((_) => console("se stopped."))
+            .then(() => console("se stopped."))
             .catch((error) => console.error(error));
         }
       }
