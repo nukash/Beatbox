@@ -93,7 +93,10 @@ export default {
           } else {
             aud.src = item.url;
             aud.currentTime = 0;
-            aud.play();
+            aud
+              .play()
+              .then((_) => console("bgm stopped."))
+              .catch((error) => console.errr(error));
           }
         } else {
           if (!item.audio) {
@@ -104,7 +107,10 @@ export default {
           if (!item.audio.paused) {
             item.audio.currentTime = 0;
           }
-          item.audio.play();
+          item.audio
+            .play()
+            .then((_) => console("bgm stopped."))
+            .catch((error) => console.errr(error));
         }
       }
     },
