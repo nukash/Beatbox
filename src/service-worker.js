@@ -1,7 +1,7 @@
 importScripts(
   "https://cdn.jsdelivr.net/gh/daffinm/pwa-utils@latest/js/debug-console.js"
 );
-const debug = new DebugConsole(DEBUG_LOGGING, `${APP_VERSION}`, "indianred");
+const debug = new DebugConsole(true, `0.0.1`, "indianred");
 debug.heading(`SERVICE WORKER STARTING`);
 
 // This is the code piece that GenerateSW mode can't provide for us.
